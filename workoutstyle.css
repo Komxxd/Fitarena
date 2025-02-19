@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --bg-color: #050A30;        
+    --primary-color: #ff69b4;   
+    --secondary-color: #6a5acd; 
+    --text-color: #ffffff;
+    --card-bg: #1e1f29;         
+    --nav-height: 70px;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(
+      45deg,
+      #000000,
+      #0b0e2b,
+      #1e1f29,
+      #000000
+    );
+    background-size: 600% 600%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #fff;
+  }
+  
+ 
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+
+.navbar {
+  position: relative;
+  width: 100%;
+  height: var(--nav-height);
+  background: transparent;
+  padding: 0 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  z-index: 999;
+}
+.nav-logo {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.nav-links {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-links li a:hover {
+  color: var(--primary-color);
+}
+.nav-search {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav-search input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #555;
+  border-radius: 20px;
+  background: #11172f;
+  color: #fff;
+  transition: border 0.3s ease;
+}
+.nav-search input::placeholder {
+  color: #888;
+}
+.nav-search input:focus {
+  outline: none;
+  border: 1px solid var(--primary-color);
+}
+.nav-search button {
+  padding: 0.4rem 0.8rem;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.nav-search button:hover {
+  background: #d12373;
+  transform: translateY(-2px);
+}
+
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  background: transparent;
+  position: relative;
+}
+.hero-content {
+  max-width: 600px;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+.workouts-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.workouts-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.card-info {
+  padding: 1rem;
+  text-align: left;
+}
+.card-info h3 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.card-info p {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+.btn-secondary {
+  background: var(--secondary-color);
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn-secondary:hover {
+  background: #3a0f66;
+  transform: translateY(-2px);
+}
+
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: transparent;
+  color: #888;
+  margin-top: 2rem;
+}
+
+#authLink {
+    font-weight: 600;
+    border: 1px solid var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    transition: background 0.3s ease, color 0.3s ease;
+    color: var(--text-color);
+  }
+  
+  #authLink:hover {
+    background: var(--primary-color);
+    color: var(--text-color);
+  }
